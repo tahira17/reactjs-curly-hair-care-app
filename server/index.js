@@ -1,13 +1,13 @@
 import express from 'express'
 import cors from 'cors'
-import Anthropic from '@anthropic-ai/sdk'
+import Groq from 'groq-sdk'
 import 'dotenv/config'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
 
 const SYSTEM_PROMPT = `You are Curl Haven's friendly AI hair assistant, specialising in curly, wavy and coily hair care.
 
@@ -33,16 +33,22 @@ app.post('/chat', async (req, res) => {
   res.setHeader('Cache-Control', 'no-cache')
   res.setHeader('Connection', 'keep-alive')
 
-  const stream = await client.messages.stream({
-    model: 'claude-sonnet-4-6',
+  const stream = await groq.chat.completions.create({
+    // model: 'llama3-8b-8192',
+    model: 'llama-3.3-70b-versatile',
+
+    messages: [
+      { role: 'system', content: SYSTEM_PROMPT },
+      ...messages
+    ],
+    stream: true,
     max_tokens: 1024,
-    system: SYSTEM_PROMPT,
-    messages,
   })
 
   for await (const chunk of stream) {
-    if (chunk.type === 'content_block_delta') {
-      res.write(`data: ${JSON.stringify({ text: chunk.delta.text })}\n\n`)
+    const text = chunk.choices[0]?.delta?.content || ''
+    if (text) {
+      res.write(`data: ${JSON.stringify({ text })}\n\n`)
     }
   }
 
