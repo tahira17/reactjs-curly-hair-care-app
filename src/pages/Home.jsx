@@ -15,13 +15,13 @@ const features = [
     link: "/quiz/curl-type",
     cta: "Find my curl type"
   },
-  {
-    emoji: "🤖",
-    title: "AI Hair Chat",
-    description: "Ask anything about your curly hair and get personalised advice instantly.",
-    link: "/chat",
-    cta: "Ask the AI"
-  },
+  // {
+  //   emoji: "🤖",
+  //   title: "AI Hair Chat",
+  //   description: "Ask anything about your curly hair and get personalised advice instantly.",
+  //   link: "/chat",
+  //   cta: "Ask the AI"
+  // },
   {
     emoji: "📓",
     title: "Wash Day Tracker",
@@ -52,12 +52,12 @@ export default function Home() {
           >
             Take the quiz
           </Link>
-          <Link
+          {/* <Link
             to="/chat"
             className="border border-teal text-teal px-8 py-3 rounded-full font-sans hover:bg-teal hover:text-white transition-all"
           >
             Ask the AI
-          </Link>
+          </Link> */}
         </div>
       </section>
 

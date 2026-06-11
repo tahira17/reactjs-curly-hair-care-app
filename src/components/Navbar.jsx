@@ -1,44 +1,48 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import logo from '../assets/logo.jpeg'
 
 export default function Navbar() {
   const [quizOpen, setQuizOpen] = useState(false)
 
   return (
-    <nav className="border-b px-8 py-4 flex justify-between items-center relative">
-      <span className="text-xl font-bold">🌀 </span>
-      <div className="flex gap-6 items-center">
-        <Link to="/" className="hover:text-purple-500">Home</Link>
+    <nav className="border-b border-mauve/30 px-8 py-3 flex justify-between items-center relative bg-white">
+      <Link to="/">
+        <img src={logo} alt="The Curl Haven" className="h-14 w-auto" />
+      </Link>
 
-        {/* Quiz Dropdown */}
+      <div className="flex gap-6 items-center font-sans text-sm text-charcoal">
+        <Link to="/" className="hover:text-purple transition-all">Home</Link>
+
         <div className="relative">
           <button
             onClick={() => setQuizOpen(!quizOpen)}
-            className="hover:text-purple-500 flex items-center gap-1"
+            className="hover:text-purple transition-all flex items-center gap-1"
           >
             Quizzes ▾
           </button>
           {quizOpen && (
-            <div className="absolute top-8 left-0 bg-white border rounded-lg shadow-md w-48 z-10">
+            <div className="absolute top-8 left-0 bg-white border border-mauve/30 rounded-xl shadow-md w-52 z-10">
               <Link
                 to="/quiz/porosity"
                 onClick={() => setQuizOpen(false)}
-                className="block px-4 py-2 hover:bg-purple-50 hover:text-purple-500"
+                className="block px-4 py-3 hover:bg-purple/5 hover:text-purple transition-all text-charcoal"
               >
-                Porosity Quiz
+                💧 Porosity Quiz
               </Link>
               <Link
                 to="/quiz/curl-type"
                 onClick={() => setQuizOpen(false)}
-                className="block px-4 py-2 hover:bg-purple-50 hover:text-purple-500"
+                className="block px-4 py-3 hover:bg-purple/5 hover:text-purple transition-all text-charcoal"
               >
-                Curl Type Quiz
+                🌀 Curl Type Quiz
               </Link>
             </div>
           )}
         </div>
 
-        <Link to="/chat" className="hover:text-purple-500">AI Chat</Link>
+        <Link to="/ingredients" className="hover:text-purple transition-all">Ingredient Checker</Link>
+        {/* <Link to="/chat" className="hover:text-purple transition-all">AI Chat</Link> */}
       </div>
     </nav>
   )
