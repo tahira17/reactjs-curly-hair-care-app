@@ -6,7 +6,14 @@ export default function Navbar() {
   const [quizOpen, setQuizOpen] = useState(false)
 
   return (
+    <>
+    <div className="bg-mauve/20 text-center py-1.5">
+  <a href="https://thecurlhaven.com" className="text-xs font-sans text-charcoal/70 hover:text-purple transition-all">
+    ← Back to The Curl Haven blog
+  </a>
+</div>
     <nav className="border-b border-mauve/30 px-8 py-3 flex justify-between items-center relative bg-white">
+      
       <Link to="/">
         <img src={logo} alt="The Curl Haven" className="h-14 w-auto" />
       </Link>
@@ -40,10 +47,13 @@ export default function Navbar() {
             </div>
           )}
         </div>
+        <Link to="/routine-builder" className="hover:text-purple transition-all">Routine Builder</Link>
 
+        {/* <Link to="/tracker" className="hover:text-purple transition-all">Wash Day Tracker</Link> */}
         <Link to="/ingredients" className="hover:text-purple transition-all">Ingredient Checker</Link>
         {/* <Link to="/chat" className="hover:text-purple transition-all">AI Chat</Link> */}
       </div>
     </nav>
+    </>
   )
 }

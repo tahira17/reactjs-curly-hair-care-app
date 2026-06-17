@@ -285,12 +285,12 @@ export default function PorosityQuiz() {
             >
               Retake Quiz
             </button>
-            <Link
+            {/* <Link
               to="/chat"
               className="bg-purple-500 text-white px-5 py-2 rounded-lg hover:bg-purple-600 transition-all font-medium text-sm"
             >
               Ask AI →
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

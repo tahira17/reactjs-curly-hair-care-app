@@ -319,12 +319,12 @@ export default function CurlTypeQuiz() {
               >
                 Retake Quiz
               </button>
-              <Link
+              {/* <Link
                 to="/chat"
                 className="bg-purple text-white px-5 py-2 rounded-full font-sans text-sm hover:opacity-90 transition-all"
               >
                 Ask AI →
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}

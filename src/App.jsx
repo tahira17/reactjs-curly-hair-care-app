@@ -4,9 +4,10 @@ import Home from './pages/Home'
 import PorosityQuiz from './pages/PorosityQuiz'
 import CurlTypeQuiz from './pages/CurlTypeQuiz'
 import Chat from './pages/Chat'
+import WashDayTracker from './pages/WashDayTracker'
 import IngredientChecker from './pages/IngredientChecker'
 import Footer from './components/Footer'
-
+import RoutineBuilder from './pages/RoutineBuilder'
 
 export default function App() {
   return (
@@ -18,7 +19,9 @@ export default function App() {
           <Route path="/quiz/porosity" element={<PorosityQuiz />} />
           <Route path="/quiz/curl-type" element={<CurlTypeQuiz />} />
           <Route path="/ingredients" element={<IngredientChecker />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/routine-builder" element={<RoutineBuilder />} />
+
+          {/* <Route path="/chat" element={<Chat />} /> */}
         </Routes>
       </main>
       <Footer />
