@@ -18,11 +18,14 @@ export default function Footer() {
         <div>
           <h4 className="font-heading text-charcoal text-lg mb-4">Tools</h4>
           <div className="flex flex-col gap-2">
+         
             <Link to="/quiz/porosity" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Porosity Quiz</Link>
-            <Link to="/quiz/curl-type" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Curl Type Quiz</Link>
-            {/* <Link to="/tracker" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Wash Day Tracker</Link> */}
-            <Link to="/routine-builder" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Routine Builder</Link>
-            <Link to="/ingredients" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Ingredient Checker</Link>
+<Link to="/quiz/curl-type" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Curl Type Quiz</Link>
+<Link to="/quiz/density-texture" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Density & Texture Quiz</Link>
+<Link to="/ingredients" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Ingredient Checker</Link>
+<Link to="/routine-builder" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Routine Builder</Link>
+<Link to="/frizz-trouble" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Frizz Troubleshooter</Link>
+<Link to="/glossary" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Curly Hair Glossary</Link>
             {/* <Link to="/chat" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">AI Hair Chat</Link> */}
           </div>
         </div>
@@ -32,7 +35,6 @@ export default function Footer() {
           <h4 className="font-heading text-charcoal text-lg mb-4">Learn</h4>
           <div className="flex flex-col gap-2">
             <a href="https://thecurlhaven.com/blog" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Blog</a>
-            {/* <a href="https://thecurlhaven.com/curly-girl-method" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">Curly Girl Method</a> */}
             <a href="https://thecurlhaven.com/about" className="font-sans text-sm text-charcoal/60 hover:text-purple transition-all">About</a>
           </div>
         </div>

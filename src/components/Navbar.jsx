@@ -7,11 +7,7 @@ export default function Navbar() {
 
   return (
     <>
-    <div className="bg-mauve/20 text-center py-1.5">
-  <a href="https://thecurlhaven.com" className="text-xs font-sans text-charcoal/70 hover:text-purple transition-all">
-    ← Back to The Curl Haven blog
-  </a>
-</div>
+  
     <nav className="border-b border-mauve/30 px-8 py-3 flex justify-between items-center relative bg-white">
       
       <Link to="/">
@@ -44,13 +40,22 @@ export default function Navbar() {
               >
                 🌀 Curl Type Quiz
               </Link>
+              <Link to="/quiz/density-texture" onClick={() => setQuizOpen(false)} className="block px-4 py-3 hover:bg-purple/5 hover:text-purple transition-all text-charcoal">
+         🧵 Density & Texture Quiz
+        </Link>
             </div>
           )}
         </div>
         <Link to="/routine-builder" className="hover:text-purple transition-all">Routine Builder</Link>
-
+          <Link to="/frizz-trouble" className="hover:text-purple transition-all">Frizz Fix</Link>
+          <Link to="/glossary" className="hover:text-purple transition-all">Glossary</Link>
         {/* <Link to="/tracker" className="hover:text-purple transition-all">Wash Day Tracker</Link> */}
         <Link to="/ingredients" className="hover:text-purple transition-all">Ingredient Checker</Link>
+        <div className="bg-mauve/20 text-center py-1.5">
+  <a href="https://thecurlhaven.com" className="text-xs font-sans text-charcoal/70 hover:text-purple transition-all">
+    ← Back to The Curl Haven blog
+  </a>
+</div>
         {/* <Link to="/chat" className="hover:text-purple transition-all">AI Chat</Link> */}
       </div>
     </nav>
