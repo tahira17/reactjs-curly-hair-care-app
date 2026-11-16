@@ -1,16 +1,25 @@
-# React + Vite
+# The Curl Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Application:** [app.thecurlhaven.com](https://app.thecurlhaven.com)
 
-Currently, two official plugins are available:
+The Curl Haven is a modern, responsive web application designed to help individuals understand and embrace their natural hair textures. Built with a focus on user experience and personalization, the app offers interactive diagnostic quizzes, customized routine builders, and targeted troubleshooting tools for curly, coily, and wavy hair care.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Interactive Hair Quizzes:** Comprehensive assessment tools to determine hair porosity, curl type, and density/texture.
+* **Custom Routine Builder:** Generates tailored wash-day and styling routines based on quiz results and specific hair goals.
+* **Frizz Troubleshooting Tool:** Diagnostic guide to help users pinpoint the root causes of frizz and find practical solutions.
+* **Ingredient Checker:** Analyzes product formulations to check for curl-friendly or drying ingredients.
+* **Hair Care Glossary:** Educational resource library explaining key concepts, terminology, and techniques.
+* **Analytics Integration:** Tracks visitor engagement and usage patterns seamlessly with Google Analytics (`gtag.js`).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **Frontend Framework:** React, Vite
+* **Styling:** Tailwind CSS
+* **Routing:** React Router
+* **Deployment & Hosting:** Vercel (Previews/Demos) & Hostinger hPanel File Manager (Production)
